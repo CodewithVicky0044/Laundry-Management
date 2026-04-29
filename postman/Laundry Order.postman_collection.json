@@ -1,0 +1,97 @@
+{
+  "info": {
+    "_postman_id": "31f12f15-c29f-45c3-a5db-a9e1cc42b771",
+    "name": "Laundry Order",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "40669566",
+    "_collection_link": "https://go.postman.co/collection/40669566-31f12f15-c29f-45c3-a5db-a9e1cc42b771?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create Order",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"customerName\": \"Vikram\",\r\n  \"phone\": \"9876543210\",\r\n  \"garments\": [\r\n    { \"type\": \"Shirt\", \"quantity\": 2, \"price\": 50 }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://laundry-management-dhuz.onrender.com/orders",
+          "protocol": "https",
+          "host": [
+            "laundry-management-dhuz",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Orders",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://laundry-management-dhuz.onrender.com/orders",
+          "protocol": "https",
+          "host": [
+            "laundry-management-dhuz",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Status",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"status\": \"PROCESSING\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://laundry-management-dhuz.onrender.com/orders/69f1c410970152e72ef41cf0/status",
+          "protocol": "https",
+          "host": [
+            "laundry-management-dhuz",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "orders",
+            "69f1c410970152e72ef41cf0",
+            "status"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
