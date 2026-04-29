@@ -7,8 +7,8 @@ function OrderForm({ form, garments, onFormChange, onGarmentChange, onAddGarment
       {garments.map((g, index) => (
         <div className="grid gap-2 md:grid-cols-[2fr_1fr_1fr_auto]" key={index}>
           <input className="rounded-md border border-slate-300 px-3 py-2" placeholder="Garment" value={g.type} onChange={(e) => onGarmentChange(index, "type", e.target.value)} required />
-          <input className="rounded-md border border-slate-300 px-3 py-2" placeholder="Quantity" type="number" min="1" value={g.quantity} onChange={(e) => onGarmentChange(index, "quantity", e.target.value)} required />
-          <input className="rounded-md border border-slate-300 px-3 py-2" placeholder="Price" type="number" min="0" value={g.price} onChange={(e) => onGarmentChange(index, "price", e.target.value)} required />
+          <input className="rounded-md border border-slate-300 px-3 py-2" placeholder="Quantity" type="number" value={g.quantity} onChange={(e) => onGarmentChange(index, "quantity", e.target.value)} required />
+          <input className="rounded-md border border-slate-300 px-3 py-2" placeholder="Price" type="number" value={g.price} onChange={(e) => onGarmentChange(index, "price", e.target.value)} required />
           <button className="rounded-md bg-slate-700 px-3 py-2 text-white disabled:opacity-40" type="button" onClick={() => onRemoveGarment(index)} disabled={garments.length === 1}>X</button>
         </div>
       ))}
