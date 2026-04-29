@@ -1,4 +1,6 @@
-const API_BASE = "http://localhost:5000/orders";
+const API_BASE =
+  import.meta.env.VITE_API_BASE_URL ||
+  "https://laundry-management-dhuz.onrender.com/orders";
 
 export async function getDashboard() {
   const res = await fetch(`${API_BASE}/dashboard`);
